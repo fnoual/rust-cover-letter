@@ -1,5 +1,8 @@
+pub mod auth;
+
 use actix_web::{HttpRequest, HttpResponse, Result};
 use serde::Serialize;
+
 
 #[derive(Serialize)]
 struct ErrorResponse {

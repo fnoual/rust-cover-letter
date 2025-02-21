@@ -1,16 +1,21 @@
 use serde::{Deserialize, Serialize};
+use diesel::prelude::*;
+use crate::schema::users;
 
-#[derive(Serialize)]
+#[derive(Serialize, Queryable)]
 pub struct User {
-    pub id: u32,
+    pub id: i32,
     pub username: String,
     pub email: String,
+    pub password_hash: String,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Insertable)]
+#[diesel(table_name = users)]
 pub struct NewUser {
     pub username: String,
     pub email: String,
+    pub password_hash: String,
 }
 
 #[derive(Deserialize)]

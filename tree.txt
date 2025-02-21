@@ -1,0 +1,51 @@
+Structure du dossier pour le volume Seagate 2
+Le num�ro de s�rie du volume est 4411-D049
+K:.
+�   .env
+�   .env.example
+�   .gitignore
+�   Cargo.lock
+�   Cargo.toml
+�   tree.txt
+�   
++---.idea
+�   �   .gitignore
+�   �   api.iml
+�   �   dataSources.local.xml
+�   �   dataSources.xml
+�   �   editor.xml
+�   �   modules.xml
+�   �   sqldialects.xml
+�   �   vcs.xml
+�   �   workspace.xml
+�   �   
+�   +---dataSources
+�       �   a437fc41-07d5-4767-869c-44d5c52929ae.xml
+�       �   
+�       +---a437fc41-07d5-4767-869c-44d5c52929ae
+�           +---storage_v2
+�               +---_src_
+�                   +---schema
+�                           rust_learn.Kc6y1g.meta
+�                           
++---migrations
+�   +---2025-02-21-003243_create_users
+�           down.sql
+�           up.sql
+�           
++---src
+�   �   db.rs
+�   �   handlers.rs
+�   �   main.rs
+�   �   middleware.rs
+�   �   models.rs
+�   �   
+�   +---middleware
+�   �       auth.rs
+�   �       
+�   +---routes
+�           auth.rs
+�           job.rs
+�           mod.rs
+�           user.rs
+�           
