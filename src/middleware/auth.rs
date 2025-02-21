@@ -4,8 +4,8 @@ use jsonwebtoken::{decode, DecodingKey, Validation};
 use std::env;
 
 #[derive(Debug, serde::Deserialize)]
-struct Claims {
-    sub: String,
+pub struct Claims {
+    pub sub: String,
     exp: usize,
 }
 
